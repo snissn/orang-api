@@ -81,8 +81,7 @@ function build_image(orang){
 
   out+= ' -background black -gravity center -flatten result`date +%s`.jpeg'
 
-  console.log(out)
-
+  return out
 }
 
 class RND {
