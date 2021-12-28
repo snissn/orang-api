@@ -35,7 +35,7 @@ app.get('/:address/:tokenid',  async (req, res) =>  {
     "traits":traits_array,
     "tokenID":tokenID,
     "seed":seed,
-    "image":'image',
+    "image": 'http://34.69.105.225/image.php?tokenID='+tokenID+'&seed='+seed + '&address=' + address,
     'convert':traits.build_image(traits_dict)
 
   }
