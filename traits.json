@@ -1,0 +1,219 @@
+{
+   "Male":{
+      "Background":{
+         "Apartment.png":10,
+         "Banana Farm.png":10,
+         "Beach.png":10,
+         "Blue Wood.png":10,
+         "Red Brick.png":10,
+         "Stone Wall.png":10,
+         "Swimming Pool.png":10,
+         "Tulip Garden.png":10,
+         "White Brick.png":10,
+         "Yellow Wall.png":10
+      },
+      "Clothes":{
+         "None":1,
+         "Batik.png":9,
+         "Bitcoin Shirt.png":10,
+         "Black Shirt.png":10,
+         "Brown Shirt.png":10,
+         "Business Suit.png":3,
+         "Ethereum Shirt.png":3,
+         "Flannel.png":10,
+         "Flent.png":5,
+         "Hoodie.png":3,
+         "Plaid Shirt.png":10,
+         "Purple Shirt.png":6,
+         "Shirt _ Slingbag.png":4,
+         "Stripe Shirt.png":4,
+         "Trench Coat.png":4,
+         "V Neck.png":4,
+         "White Short Sleeve.png":4
+      },
+      "Type":{
+         "Orangutan":99
+      },
+      "Eyes":{
+         "Blue Eyes.png":35,
+         "Brown Eyes.png":35,
+         "Green Eyes.png":25,
+         "Safety Gogles.png":5
+      },
+      "Body":{
+         "Blue-Small-Nose-Big-Smile.png":2,
+         "Blue-Small-Nose-Cig.png":2,
+         "Blue-Small-Nose-Toothpick.png":2,
+         "Blue-Small-Nose.png":2,
+         "Cyborg-Grey.png":888880.5,
+         "Cyborg-Purple.png":888880.5,
+         "Dark-Big-Nose-Cig.png":2,
+         "Dark-Big-Nose-Sad.png":2,
+         "Dark-Big-Nose.png":2,
+         "Dark-Small-Nose-Sad.png":2,
+         "Dark-Small-Nose.png":2,
+         "Fair-Big-Nose-Toothpick.png":2,
+         "Fair-Big-Nose.png":2,
+         "Fair-Small-Nose-Toothpick.png":2,
+         "Fair-Small-Nose.png":2,
+         "Gold-Cig.png":1,
+         "Gold-Sad.png":1,
+         "Gold-Toothpick.png":1,
+         "Gold.png":1,
+         "Green-Croc-Big-Nose-Big-Smile.png":2,
+         "Green-Croc-Big-Nose-Sad.png":2,
+         "Green-Croc-Big-Nose-Toothpick.png":2,
+         "Green-Croc-Big-Nose.png":2,
+         "Green-Croc-Small-Nose-Sad.png":2,
+         "Green-Croc-Small-Nose-Toothpick.png":2,
+         "Green-Croc-Small-Nose.png":2,
+         "Grey-Big-Nose-Cig.png":2,
+         "Grey-Big-Nose-Sad.png":2,
+         "Grey-Big-Nose-Toothpick.png":2,
+         "Grey-Big-Nose.png":2,
+         "Grey-Small-Nose-Cig.png":2,
+         "Grey-Small-Nose-Sad.png":2,
+         "Grey-Small-Nose-Toothpick.png":2,
+         "Grey-Small-Nose.png":2,
+         "Orange-Small-Nose-Cig.png":2,
+         "Orange-Small-Nose-Frown.png":2,
+         "Orange-Small-Nose-Sad.png":2,
+         "Orange-Small-Nose.png":2,
+         "Purple-Big-Nose-Big-Smile.png":2,
+         "Purple-Big-Nose-Sad.png":2,
+         "Purple-Big-Nose.png":2,
+         "Purple-Small-Nose-Big-Smile.png":2,
+         "Purple-Small-Nose-Cig.png":2,
+         "Purple-Small-Nose-Sad.png":2,
+         "Red-Big-Nose-Cig.png":2,
+         "Red-Big-Nose-Sad.png":2,
+         "Red-Big-Nose-Toothpick.png":1,
+         "Red-Big-Nose.png":2,
+         "Red-Small-Nose-Cig.png":1,
+         "Red-Small-Nose-Sad.png":1,
+         "Red-Small-Nose-Toothpick.png":1,
+         "Red-Small-Nose.png":1,
+         "Smooth-Green-Big-Nose-Big-Smile.png":2,
+         "Smooth-Green-Big-Nose-Sad.png":2,
+         "Smooth-Green-Big-Nose-Toothpick.png":2,
+         "Smooth-Green-Small-Nose.png":2
+      },
+      "Hair":{
+         "No Hair":10,
+         "Blue Hair.png":5,
+         "Brown Hair.png":5,
+         "Cornrow.png":5,
+         "Curly Hair.png":5,
+         "Gold Hair.png":5,
+         "Green Hair.png":10,
+         "Long Hair.png":20,
+         "Mohawk.png":10,
+         "Short-Black-Hair.png":10,
+         "Short-Brown-Hair.png":10,
+         "Trojan-Black.png":10,
+         "Trojan-Orange.png":10
+      },
+      "Head accessories":{
+         "None":75,
+         "Cap.png":5,
+         "Hat.png":5,
+         "King Crown.png":5,
+         "Prince Crown.png":5,
+         "Straw Hat.png":5
+      },
+      "Neck":{
+         "None":90,
+         "Bandana.png":2,
+         "Bear Claw.png":2,
+         "Neck Brace.png":2,
+         "Shark Tooth.png":2,
+         "Wolf Tooth.png":2
+      },
+      "Eye":{
+         "Normal":95,
+         "Laser Eyes.png":5
+      },
+      "Beard":{
+         "None":98,
+         "Black Beard.png":1,
+         "Orange Beard.png":1
+      }
+   },
+   "Female":{
+      "Background":{
+         "Apartment.png":10,
+         "Banana Farm.png":10,
+         "Beach.png":10,
+         "Blue Wood.png":10,
+         "Red Brick.png":10,
+         "Stone Wall.png":10,
+         "Swimming Pool.png":10,
+         "Tulip Garden.png":10,
+         "White Brick.png":10,
+         "Yellow Wall.png":10
+      },
+      "Body":{
+         "Blue.png":15,
+         "Gold.png":10,
+         "Grey.png":15,
+         "Natural.png":50,
+         "White.png":10
+      },
+      "Type":{
+         "Orangutan":99
+      },
+      "Eyes":{
+         "Black Eyes.png":30,
+         "Blue Eyes.png":10,
+         "Electric Eyes.png":15,
+         "Pink Eyes.png":10,
+         "Red Eyes.png":10,
+         "X Eyes.png":10,
+         "Yellow Eyes.png":15
+      },
+      "Neck":{
+         "Normal":70,
+         "Feather Necklace.png":20,
+         "Flame Dragon.png":10
+      },
+      "Eyewear":{
+         "Normal":80,
+         "3D Spec.png":20
+      },
+      "Hair":{
+         "Long Hair.png":30,
+         "Bleach.png":30,
+         "Glam.png":20,
+         "Mullet.png":10,
+         "Egirl.png":10
+      },
+      "Hat":{
+         "None":30,
+         "Hard hat.png":20,
+         "Helmet.png":20,
+         "Jester.png":10,
+         "Pink-Helmet.png":10,
+         "Warrior.png":10
+      },
+      "Mask":{
+         "None":90,
+         "Cat.png":2,
+         "Hannya.png":2,
+         "Kyubi.png":3,
+         "Plague Doctor.png":3
+      },
+      "Clothes":{
+         "Ballet.png":10,
+         "Cheongsam.png":5,
+         "Crop Top.png":5,
+         "Evening Dress.png":10,
+         "Floral Dress.png":10,
+         "Kimono.png":10,
+         "Orange Dress.png":10,
+         "Singlet.png":10,
+         "Stewardess.png":10,
+         "Summer Dress.png":10,
+         "Yoga Clothes.png":10
+      }
+   }
+}
