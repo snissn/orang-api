@@ -24,7 +24,7 @@ app.get('/:address/:tokenid',  async (req, res) =>  {
     if(key.split("Eyebrow").length > 1 ||key.split("_").length > 1 ||  value.split("#").length > 1){
       continue;
     }
-    traits_array.push({"trait_type":key,"value":value})
+    traits_array.push({"trait_type":key,"value":value.split(".png")[0]})
   }
 
   
