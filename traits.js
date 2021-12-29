@@ -119,15 +119,14 @@ function build_image(orang, tokenID){
         out+=`   "${sexvalue}/Eyes/${eyes}"  `
       }
   }else{ // Male
-
     var traits_order = [
       "Background"
       ,"Body"
       ,"Clothes"
+      ,"Neck"
       ,"Hair"
       ,"Head accessories"
       ,"Type"
-      ,"Neck"
       ,"Eyes"
       ,"Eye"
       ,"Beard"
