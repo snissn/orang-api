@@ -60,7 +60,7 @@ function draw_trait(out,trait){
 
 }
 
-function build_image(orang){
+function build_image(orang, tokenID){
   var out = 'convert '
   var sexvalue;
   for(var sex in orang){
@@ -79,7 +79,7 @@ function build_image(orang){
 
 
 
-  out+= ' -background black -gravity center -flatten result`date +%s`.jpeg'
+  out+= ' -background black -gravity center -flatten '+tokenID+'.jpeg'
 
   return out
 }
