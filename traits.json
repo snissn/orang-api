@@ -13,7 +13,6 @@
          "Yellow Wall.png":10
       },
       "Clothes":{
-         "None":1,
          "Batik.png":9,
          "Bitcoin Shirt.png":10,
          "Black Shirt.png":10,
@@ -115,11 +114,11 @@
       },
       "Head accessories":{
          "None":75,
-         "Cap.png":5,
-         "Hat.png":5,
-         "King Crown.png":5,
-         "Prince Crown.png":5,
-         "Straw Hat.png":5
+         "Cap.png":6,
+         "Hat.png":6,
+         "King Crown.png":2,
+         "Prince Crown.png":4,
+         "Straw Hat.png":6
       },
       "Neck":{
          "None":90,
