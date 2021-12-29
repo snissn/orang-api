@@ -5,6 +5,11 @@ const traits = require("./traits.json");
 
 const sex_traits = {"Male":70, "Female":30}
 
+const hat_hair = {
+  "No Hair":10,
+  "Long Hair.png":20
+}
+
 
 
 function build_traits(seed){
@@ -24,6 +29,12 @@ function build_traits(seed){
 
   if(orang['Body'] == "Cyborg-Grey.png" || orang['Body'] == "Cyborg-Purple.png"){
     orang['Type'] = "Cyborg"
+  }
+
+  if(orang['Head accessories'] ==  'Cap.png' || 
+  orang['Head accessories'] ==  'Hat.png' || 
+  orang['Head accessories'] == "Straw Hat.png" ){
+    orang['Hair'] = get_probabilities(hat_hair)
   }
 
   return orang
