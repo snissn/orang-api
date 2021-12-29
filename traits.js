@@ -79,6 +79,7 @@ function build_image(orang, tokenID){
     break;
   }
   delete orang["Sex"]
+  if(sexvalue == "Female"){
   for(var k in orang){
     const v = orang[k]
 
@@ -100,6 +101,31 @@ function build_image(orang, tokenID){
       }else{
         out+=`   "${sexvalue}/Eyes/${eyes}"  `
       }
+
+  }else{ // Male
+
+    var traits_order = [
+      "Background"
+      ,"Clothes"
+      ,"Hair"
+      ,"Head accessories"
+      ,"Type"
+      ,"Body"
+      ,"Neck"
+      ,"Eyes"
+      ,"Eye"
+      ,"Beard"
+    ]
+    for(var i in traits_order){
+
+      const k = traits_order[i]
+      const v = orang[traits_order[i]]
+      if(v.split(".png").length > 1){
+        out+=`   "${sexvalue}/${k}/${v}"  `
+      }
+    }
+
+  }
 
 
 
