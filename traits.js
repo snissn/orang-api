@@ -106,16 +106,17 @@ function build_image(orang, tokenID){
 
     var traits_order = [
       "Background"
+      ,"Body"
       ,"Clothes"
       ,"Hair"
       ,"Head accessories"
       ,"Type"
-      ,"Body"
       ,"Neck"
       ,"Eyes"
       ,"Eye"
       ,"Beard"
     ]
+
     for(var i in traits_order){
 
       const k = traits_order[i]
