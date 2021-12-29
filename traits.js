@@ -37,6 +37,11 @@ function build_traits(seed){
     orang['Hair'] = get_probabilities(hat_hair)
   }
 
+
+  if(orang['Hair'] == 'Long Hair.png'){
+    orang['Hat'] = 'None'
+  }
+
   return orang
 }
 
@@ -80,9 +85,21 @@ function build_image(orang, tokenID){
   }
   delete orang["Sex"]
   if(sexvalue == "Female"){
-  for(var k in orang){
+    var traits_order = [
+      "Background",
+      "Body",
+      "Clothes",
+      "Type",
+      "Eyes",
+      "Neck",
+      "Eyewear",
+      "Hair",
+      "Hat",
+      "Mask",
+    ]
+  for(var index in traits_order){
+    var k = traits_order[index]
     const v = orang[k]
-
     //skip eyes if mask is not None or Hannya.png
     if(k == 'Eyes' && sexvalue == "Female"){
       if( orang['Mask'] == 'None'  || orang['Mask'] == "Hannya.png"){
@@ -101,7 +118,6 @@ function build_image(orang, tokenID){
       }else{
         out+=`   "${sexvalue}/Eyes/${eyes}"  `
       }
-
   }else{ // Male
 
     var traits_order = [
