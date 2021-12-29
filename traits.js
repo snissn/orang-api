@@ -70,12 +70,25 @@ function build_image(orang, tokenID){
   delete orang["Sex"]
   for(var k in orang){
     const v = orang[k]
+
+    //skip eyes if mask is not None or Hannya.png
+    if(k == 'Eyes' && sexvalue == "Female"){
+      if( orang['Mask'] == 'None'  || orang['Mask'] == "Hannya.png"){
+      }else{
+        continue;
+      }
+    }
     if(v.split(".png").length > 1){
       out+=`   "${sexvalue}/${k}/${v}"  `
     }
   }
   const eyes = orang['Eyes']
-  out+=`   "${sexvalue}/Eyes/${eyes}"  `
+
+
+      if( orang['Mask'] == 'Cat.png'  || orang['Mask'] == "Kyubi.png"  || orang['Mask'] == "Plague Doctor.png"){
+      }else{
+        out+=`   "${sexvalue}/Eyes/${eyes}"  `
+      }
 
 
 
