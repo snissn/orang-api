@@ -38,8 +38,13 @@ function build_traits(seed){
   }
 
 
-  if(orang['Hair'] != 'Long Hair.png'){
+  if(orang['Clothes'] == "Hoodie.png"){
+    orang['Hair'] = "None";
+  }
+  if(orang['Sex'] == "Male"){
+    if( orang['Hair'] != 'Long Hair.png'){
     orang['Hat'] = 'None'
+    }
   }
 
   return orang
@@ -93,9 +98,9 @@ function build_image(orang, tokenID){
       "Eyes",
       "Neck",
       "Eyewear",
+      "Mask",
       "Hair",
       "Hat",
-      "Mask",
     ]
   for(var index in traits_order){
     var k = traits_order[index]
@@ -107,9 +112,16 @@ function build_image(orang, tokenID){
         continue;
       }
     }
+    if(( k == 'Hair' || k == 'Mask') && orang['Mask'] == 'Plague Doctor.png'){
+      continue
+    }
     if(v.split(".png").length > 1){
       out+=`   "${sexvalue}/${k}/${v}"  `
     }
+  }
+  if(orang['Mask'] == 'Plague Doctor.png'){
+    out += `   "${sexvalue}/Hair/${orang['Hair']}"  `
+    out += `   "${sexvalue}/Mask/${orang['Mask']}"  `
   }
   const eyes = orang['Eyes']
 
@@ -121,16 +133,34 @@ function build_image(orang, tokenID){
   }else{ // Male
     var traits_order = [
       "Background"
+      ,"Hair"
       ,"Body"
       ,"Clothes"
       ,"Neck"
-      ,"Hair"
       ,"Head accessories"
       ,"Type"
       ,"Eyes"
       ,"Eye"
       ,"Beard"
     ]
+    var traits_order_hoodie = [
+      "Background"
+      ,"Hair"
+      ,"Body"
+      ,"Eyes"
+      ,"Clothes"
+      ,"Neck"
+      ,"Head accessories"
+      ,"Type"
+      ,"Eye"
+      ,"Beard"
+    ]
+    if(orang['Clothes'] == "Hoodie.png"){
+      traits_order = traits_order_hoodie;
+    }
+
+
+
 
     for(var i in traits_order){
 
