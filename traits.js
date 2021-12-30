@@ -41,11 +41,9 @@ function build_traits(seed){
   if(orang['Clothes'] == "Hoodie.png"){
     orang['Hair'] = "None";
   }
-  if(orang['Sex'] == "Male"){
     if( orang['Hair'] != 'Long Hair.png'){
     orang['Hat'] = 'None'
     }
-  }
 
   return orang
 }
