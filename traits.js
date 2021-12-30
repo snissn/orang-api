@@ -88,7 +88,7 @@ function build_image(orang, tokenID){
   }
   delete orang["Sex"]
   if(sexvalue == "Female"){
-    var traits_order = [
+    var traits_order_hannya = [
       "Background",
       "Body",
       "Clothes",
@@ -100,6 +100,21 @@ function build_image(orang, tokenID){
       "Hair",
       "Hat",
     ]
+    var traits_order = [
+      "Background",
+      "Body",
+      "Clothes",
+      "Type",
+      "Eyes",
+      "Neck",
+      "Eyewear",
+      "Hair",
+      "Mask",
+      "Hat",
+    ]
+      if(orang['Mask'] == "Hannya.png"){
+        var traits_order = traits_order_hannya;
+      }
   for(var index in traits_order){
     var k = traits_order[index]
     const v = orang[k]
