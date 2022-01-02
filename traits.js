@@ -29,6 +29,7 @@ function build_traits(seed){
 
   if(orang['Body'] == "Cyborg-Grey.png" || orang['Body'] == "Cyborg-Purple.png"){
     orang['Type'] = "Cyborg"
+    orang['Clothes'] = "None";
   }
 
   if(orang['Head accessories'] ==  'Cap.png' || 
@@ -40,10 +41,14 @@ function build_traits(seed){
 
   if(orang['Clothes'] == "Hoodie.png"){
     orang['Hair'] = "None";
+    orang['Hat'] = "None";
   }
-    if( orang['Hair'] != 'Long Hair.png'){
+  if( orang['Hair'] != 'Long Hair.png'){
     orang['Hat'] = 'None'
-    }
+  }else{
+    orang['Mask'] = 'None' // make mask more rare
+
+  }
 
   return orang
 }
