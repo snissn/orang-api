@@ -176,6 +176,9 @@ function build_image(orang, tokenID){
     if(orang['Clothes'] == "Hoodie.png"){
       traits_order = traits_order_hoodie;
     }
+    if(orang['Eyes'] == "Safety Gogles.png" ){
+      orang['Eye'] = "Normal"
+    }
 
 
 
