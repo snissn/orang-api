@@ -65,6 +65,13 @@ function build_traits(seed, draw){
         orang['Nose'] = nose
         orang['Mouth'] = mouth
       }
+    }else if(orang['Body'].split('-').length == 5){
+      var [body,nose,_,mouth,mouthh] =orang['Body'].split(".png")[0].split('-')
+      if(body && nose && mouth && mouthh){
+        orang['Body'] = body
+        orang['Nose'] = nose
+        orang['Mouth'] = mouth + " " + mouthh
+      }
     }else if(orang['Body'].split('-').length == 2){
       if(orang['Body'].split("-")[0] == 'Cyborg'){
         var [cyborg,body] =  orang['Body'].split(".png")[0].split('-')
@@ -84,12 +91,16 @@ function build_traits(seed, draw){
 
 
   }
+
+
+
   if(draw){
-    if(orang["Eyes"] == "Safety Goggles.png"){
+    console.log(orang)
+    if(orang["Eye Wear"] == "Safety Goggles.png"){
     //console.log(orang['Body']) //Smooth-Green-Big-Nose-Big-Smile.png
       var nose = orang['Body'].split("-")
-      if(nose[1] && nose[2]){
-        orang['Nose'] = nose[2]+"-"+nose[1]+".png";
+      if(nose[0] && nose[1]){
+        orang['Nose'] = nose[1]+"-"+nose[0]+".png";
       }
     }
   }
@@ -144,9 +155,9 @@ function build_image(seed, tokenID){
       "Body",
       "Clothes",
       "Type",
-      "Eyes",
+      "Eye Color",
       "Neck",
-      "Eyewear",
+      "Eye Wear",
       "Mask",
       "Hair",
       "Hat",
@@ -156,9 +167,9 @@ function build_image(seed, tokenID){
       "Body",
       "Clothes",
       "Type",
-      "Eyes",
+      "Eye Color",
       "Neck",
-      "Eyewear",
+      "Eye Wear",
       "Hair",
       "Mask",
       "Hat",
@@ -170,7 +181,7 @@ function build_image(seed, tokenID){
     var k = traits_order[index]
     const v = orang[k]
     //skip eyes if mask is not None or Hannya.png
-    if(k == 'Eyes' && sexvalue == "Female"){
+    if(k == 'Eye Color' && sexvalue == "Female"){
       if( orang['Mask'] == 'None'  || orang['Mask'] == "Hannya.png"){
       }else{
         continue;
@@ -187,12 +198,12 @@ function build_image(seed, tokenID){
     out += `   "${sexvalue}/Hair/${orang['Hair']}"  `
     out += `   "${sexvalue}/Mask/${orang['Mask']}"  `
   }
-  const eyes = orang['Eyes']
+  const eyes = orang['Eye Color']
 
 
-      if( orang['Mask'] == 'Cat.png'  || orang['Mask'] == "Kyubi.png"  || orang['Mask'] == "Plague Doctor.png"){
+      if( orang['Mask'] == 'Cat.png'  || orang['Mask'] == "Kyubi.png"  || orang['Mask'] == "Plague Doctor.png" || orang['Eye Wear'] =='3D Spec.png' ){
       }else{
-        out+=`   "${sexvalue}/Eyes/${eyes}"  `
+        out+=`   "${sexvalue}/Eye Color/${eyes}"  `
       }
   }else{ // Male
     var traits_order = [
@@ -203,27 +214,27 @@ function build_image(seed, tokenID){
       ,"Neck"
       ,"Head accessories"
       ,"Type"
-      ,"Eyes"
+      ,"Eye Color"
       ,"Beard"
-      ,"Eye"
+      ,"Eye Wear"
       ,"Nose"
     ]
     var traits_order_hoodie = [
       "Background"
       ,"Hair"
       ,"Body"
-      ,"Eyes"
+      ,"Eye Color"
       ,"Clothes"
       ,"Neck"
       ,"Head accessories"
       ,"Type"
-      ,"Eye"
+      ,"Eye Wear"
       ,"Beard"
     ]
     if(orang['Clothes'] == "Hoodie.png"){
       traits_order = traits_order_hoodie;
     }
-    //if(orang['Eyes'] == "Safety Gogles.png" ){
+    //if(orang['Eye Wear'] == "Safety Gogles.png" ){
       //orang['Eye'] = "Normal"
     //}
 

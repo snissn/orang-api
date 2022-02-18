@@ -33,11 +33,10 @@
       "Type":{
          "Orangutan":99
       },
-      "Eyes":{
+      "Eye Color":{
          "Blue Eyes.png":35,
          "Brown Eyes.png":35,
-         "Green Eyes.png":25,
-         "Safety Goggles.png":5
+         "Green Eyes.png":25
       },
       "Body":{
          "Blue-Small-Nose-Big-Smile.png":2,
@@ -135,9 +134,10 @@
          "Shark Tooth.png":2,
          "Wolf Tooth.png":2
       },
-      "Eye":{
-         "Normal":87,
+      "Eye Wear":{
+         "None":82,
          "VR Headset.png":8,
+         "Safety Goggles.png":5,
          "Laser Eyes.png":5
       },
       "Beard":{
@@ -169,7 +169,7 @@
       "Type":{
          "Orangutan":99
       },
-      "Eyes":{
+      "Eye Color":{
          "Black Eyes.png":30,
          "Blue Eyes.png":10,
          "Electric Eyes.png":15,
@@ -183,7 +183,7 @@
          "Feather Necklace.png":20,
          "Flame Dragon.png":10
       },
-      "Eyewear":{
+      "Eye Wear":{
          "Normal":80,
          "3D Spec.png":20
       },
