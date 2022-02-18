@@ -12,7 +12,7 @@ const hat_hair = {
 
 
 
-function build_traits(seed){
+function build_traits(seed, draw){
   if(seed != "random"){
     r = new RND(parseInt(seed.slice(0, 16), 16))
   }
@@ -50,6 +50,51 @@ function build_traits(seed){
 
   }
 
+  if(!draw){
+
+    orang['Type'] = "Orangutan";
+
+  var nose = orang['Body']
+
+  if(orang['Sex'] == "Male"){
+
+    if(orang['Body'].split('-').length == 4){
+      var [body,nose,_,mouth] =orang['Body'].split(".png")[0].split('-')
+      if(body && nose && mouth){
+        orang['Body'] = body
+        orang['Nose'] = nose
+        orang['Mouth'] = mouth
+      }
+    }else if(orang['Body'].split('-').length == 2){
+      if(orang['Body'].split("-")[0] == 'Cyborg'){
+        var [cyborg,body] =  orang['Body'].split(".png")[0].split('-')
+        orang['Body'] = body
+        orang['Type'] = cyborg
+      }
+    }else if(orang['Body'].split('-').length == 3){
+      var [body,nose,_] = orang['Body'].split(".png")[0].split('-')
+      var mouth = "Normal"
+      orang['Body'] = body
+      orang['Nose'] = nose
+      orang['Mouth'] = mouth
+    }
+  }
+
+
+
+
+  }
+  if(draw){
+    if(orang["Eyes"] == "Safety Goggles.png"){
+    //console.log(orang['Body']) //Smooth-Green-Big-Nose-Big-Smile.png
+      var nose = orang['Body'].split("-")
+      if(nose[1] && nose[2]){
+        orang['Nose'] = nose[2]+"-"+nose[1]+".png";
+      }
+    }
+  }
+
+
   return orang
 }
 
@@ -84,7 +129,8 @@ function draw_trait(out,trait){
 
 }
 
-function build_image(orang, tokenID){
+function build_image(seed, tokenID){
+  var orang = build_traits(seed, true)
   var out = 'convert '
   var sexvalue;
   for(var sex in orang){
@@ -158,8 +204,9 @@ function build_image(orang, tokenID){
       ,"Head accessories"
       ,"Type"
       ,"Eyes"
-      ,"Eye"
       ,"Beard"
+      ,"Eye"
+      ,"Nose"
     ]
     var traits_order_hoodie = [
       "Background"
@@ -176,9 +223,9 @@ function build_image(orang, tokenID){
     if(orang['Clothes'] == "Hoodie.png"){
       traits_order = traits_order_hoodie;
     }
-    if(orang['Eyes'] == "Safety Gogles.png" ){
-      orang['Eye'] = "Normal"
-    }
+    //if(orang['Eyes'] == "Safety Gogles.png" ){
+      //orang['Eye'] = "Normal"
+    //}
 
 
 
@@ -187,7 +234,7 @@ function build_image(orang, tokenID){
 
       const k = traits_order[i]
       const v = orang[traits_order[i]]
-      if(v.split(".png").length > 1){
+      if(v&&v.split(".png").length > 1){
         out+=`   "${sexvalue}/${k}/${v}"  `
       }
     }

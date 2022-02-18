@@ -37,7 +37,7 @@
          "Blue Eyes.png":35,
          "Brown Eyes.png":35,
          "Green Eyes.png":25,
-         "Safety Gogles.png":5
+         "Safety Goggles.png":5
       },
       "Body":{
          "Blue-Small-Nose-Big-Smile.png":2,
@@ -55,10 +55,19 @@
          "Fair-Big-Nose.png":2,
          "Fair-Small-Nose-Toothpick.png":2,
          "Fair-Small-Nose.png":2,
-         "Gold-Cig.png":1,
-         "Gold-Sad.png":1,
-         "Gold-Toothpick.png":1,
-         "Gold.png":1,
+
+         "Gold-Small-Nose-Cig.png" :0.5,
+         "Gold-Big-Nose-Cig.png":0.5,
+
+         "Gold-Small-Nose-Sad.png": 0.5,
+         "Gold-Big-Nose-Sad.png": 0.5,
+
+         "Gold-Small-Nose-Toothpick.png":0.5,
+         "Gold-Big-Nose-Toothpick.png":0.5,
+
+         "Gold-Small-Nose.png" : 0.5,
+         "Gold-Big-Nose.png" : 0.5,
+
          "Green-Croc-Big-Nose-Big-Smile.png":2,
          "Green-Croc-Big-Nose-Sad.png":2,
          "Green-Croc-Big-Nose-Toothpick.png":2,
@@ -127,7 +136,8 @@
          "Wolf Tooth.png":2
       },
       "Eye":{
-         "Normal":95,
+         "Normal":87,
+         "VR Headset.png":8,
          "Laser Eyes.png":5
       },
       "Beard":{

@@ -16,7 +16,9 @@ app.get('/favicon.ico',  async (req, res) =>  {
 app.get('/:address/:tokenid',  async (req, res) =>  {
     const tokenID = req.params.tokenid;
     const address = req.params.address;
+  console.log("HI")
   const seed = await chain.getSeed(address,tokenID);
+  console.log("HI2")
   const traits_array = []
   const traits_dict = traits.build_traits(seed);
   for(var key in traits_dict){
@@ -36,7 +38,7 @@ app.get('/:address/:tokenid',  async (req, res) =>  {
     "tokenID":tokenID,
     "seed":seed,
     "image": 'http://35.238.17.89/image.php?tokenID='+tokenID+'&seed='+seed + '&address=' + address,
-    'convert':traits.build_image(traits_dict, tokenID)
+    'convert':traits.build_image(seed, tokenID)
   }
   res.json(data);
 });
