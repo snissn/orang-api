@@ -38,6 +38,11 @@ function build_traits(seed, draw){
     orang['Hair'] = get_probabilities(hat_hair)
   }
 
+  if(orang['Head accessories'] != "None"){
+    orang['Eye Wear'] = "None";
+
+  }
+
 
   if(orang['Clothes'] == "Hoodie.png"){
     orang['Hair'] = "None";
@@ -49,6 +54,9 @@ function build_traits(seed, draw){
     orang['Mask'] = 'None' // make mask more rare
 
   }
+
+
+
 
   if(!draw){
 
